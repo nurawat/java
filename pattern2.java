@@ -12,13 +12,14 @@ class pattern2
 {
   public static void main(String[] args)
   {
+    /* We are taking the starting  point of each line i.e 1,2,3,4 and putting it in a varible start and then adding +1 to the variable for particular row */
+
     int number,i,j,start,constant;
     Scanner sc = new Scanner(System.in);
     System.out.print("Enter the number of rows");
     number = sc.nextInt();
 
     System.out.println("....Pattern Printing Now......\n");
-    // Using  ASCII method
     start = 1;
     for(i=0;i<5;i++)
     {
