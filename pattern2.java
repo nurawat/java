@@ -20,9 +20,9 @@ class pattern2
     number = sc.nextInt();
 
     System.out.println("....Pattern Printing Now......\n");
-    start = 1;
     for(i=0;i<5;i++)
     {
+      start = i + 1;
       System.out.println();
       constant = start;
       for(j=0;j<=i;j++)
@@ -30,7 +30,6 @@ class pattern2
         System.out.print(constant + " ");
               constant++ ;
       }
-      start ++;
     }
   }
 }
