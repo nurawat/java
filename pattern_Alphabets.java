@@ -3,15 +3,16 @@
 // From the User Like
 //
 // @example:
-// Enter the alphabet You need Pattern of : Aa
-// Printing A:
+// Enter the String You need Pattern of : Aa
+// Printing Pattern for the String      : Aa
+// Printing Pattern for Character A:
 // * * * * *
 // *       *
 // * * * * *
 // *       *
 // *       *
 //
-// Printing A:
+// Printing Pattern for Character A:
 // * * * * *
 // *       *
 // * * * * *
@@ -69,14 +70,14 @@ class pattern_Alphabets
     String pattern;
     do
     {
-      System.out.print("Enter the alphabet You need Pattern of :");
+      System.out.print("Enter the String You need Pattern of : ");
       pattern = s.next();
 
-      System.out.println("Printing Pattern "+ pattern);
+      System.out.println("Printing Pattern for the String      : "+ pattern);
 
       for(string_loop=0;string_loop<pattern.length();string_loop++)
       {
-        System.out.println("\nPrinting Character "+ pattern.charAt(string_loop)+" : ");
+        System.out.println("\nPrinting Pattern for Character "+ pattern.charAt(string_loop)+" : ");
         switch(pattern.toUpperCase().charAt(string_loop))
         {
           case 'A':
