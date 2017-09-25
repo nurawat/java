@@ -3,20 +3,59 @@
 // From the User Like
 //
 // @example:
-// Enter the alphabet You need Pattern of : AaAa
+// Enter the alphabet You need Pattern of : Aa
 // Printing A:
-// * * * * * 
-// *    * 
-// * * * * * 
-// *    * 
-// *    * 
+// * * * * *
+// *       *
+// * * * * *
+// *       *
+// *       *
+//
+// Printing A:
+// * * * * *
+// *       *
+// * * * * *
+// *       *
+// *       *
 //
 // Done !!!
 // Want to print more (y/n):n
 // System Exiting !!!
-// @ Classes used: java.io.* 
+// @ Classes used: java.io.*
 //                 java.util.Scanner
+//
+//  #####################################LOGIC###############################
+//  Typically this is a 5x5 matrix where height=5 i.e. the length of the matrix
+// 00 01 02 03 04
+// 10 11 12 13 14
+// 20 21 22 23 24
+// 30 31 32 33 34
+// 40 41 42 43 44
 
+// so if i=0 means : first row to be starred
+//       i=4 means : last row is starred
+//       i= (height)/2 means i==(5/2)
+//       ====================> i=2.5 (conversion to int is 2) so the middle row i.e 20 21 22 23 24 is starred
+// j=0 means first column starred
+// j=4 means last column is starred
+// j==(height/2) means ====> j==2.5 ======> j==2 i.e. the middle column ie.e 02 12 22 32 42 is starred
+
+
+// // ============================Diagonal Elements==========================
+// for frontslash Diagonal
+// i.e 04 13 22 31 40 ... the condition is : (i==(height-1)-j) Since we are using height=5 and j goes till 4 i.e. to reduce that gap we are doing height-1
+// so if i = 0 then,..........(5-1)-4 = 0 provided if(j=4) so this will lead to diagonal element
+
+// Similar for the other diagonal element
+
+// // ============================Half diagonal================================
+// for elements such as 04 13 22 only as *
+// use first backslash diagonal rule i.e. (i==(height-1)-j) which will select all the backslash diagonal now filter out the elements which are below 
+// 22 i.e. 31 40 so it will be
+
+// if ( i==(height-1)-j && i>height/2) since i will be greater than 2 for the downward diagonal element 
+//
+//
 import java.io.* ;
 import java.util.Scanner;
 
@@ -457,12 +496,13 @@ class pattern_Alphabets
             }
         break;
 
-        default: System.out.println("Something Went Wrong");
+        default: System.out.println("Something Went Wrong !!!");
         }
       }
-      System.out.println("Want to Do it Again (y/n) :");
+      System.out.println("\n\n---------------------Done Printing!!!!----------------------------\n");
+      System.out.print("Want to Do it Again (y/n) :");
       choice = s.next().charAt(0);
     }while(choice=='y' || choice=='Y');
-    // System.out.print("System Exiting !!!");
+    System.out.print("System Exiting !!!");
   }
 }
